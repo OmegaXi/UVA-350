@@ -1,5 +1,7 @@
 #include<iostream>
 #include<cstdlib>
+#include<cstdio>
+#include<cstring>
 
 using namespace std;
 
@@ -13,7 +15,7 @@ main()
 		z%=m;
 		i%=m;
 		l%=m;
-		memset(arr,o,sizeof(arr));
+		memset(arr,0,sizeof(arr));
 		int count=0;
 		l=(z*l+i)%m;
 		while(!arr[l])
@@ -22,5 +24,6 @@ main()
 			arr[l]=1;
 			l=(z*l+i)%m;
 		}
+		cout<<"Case "<<c++<<": "<<count<<endl;
 	}
 }
